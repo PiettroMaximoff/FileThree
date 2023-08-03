@@ -157,27 +157,22 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.file-three__container > .file-three__list > .file-three__item-file {
-  margin-left: 18px;
-}
-.file-three__container > .file-three__list {
-  overflow: hidden;
-}
 .file-three__list {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  overflow: hidden;
 }
-.file-three__list::before {
+.file-three__list li:last-of-type::after {
   content: "";
   position: absolute;
   width: 1px;
-  height: calc(100% + 10px);
+  height: 100vh;
   border-left: 1px dotted #000000;
-  left: 6px;
-  top: -25px;
+  left: -11px;
+  bottom: 15px;
   z-index: -1;
-}
-.file-three__list .file-three__list {
-  padding-left: 18px;
 }
 .file-three__item {
   position: relative;
@@ -224,6 +219,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.file-three__item-file {
+  margin-left: 18px;
+}
 .file-three__item-file > .file-three__item-header > .file-three__item-icon {
   background: url("../images/file.png") center no-repeat;
   background-size: contain;
@@ -236,7 +234,7 @@ body {
   background-size: contain;
 }
 .file-three__item_open > .file-three__list {
-  display: block;
+  display: flex;
 }
 .file-three__item_open > .file-three__item-header > .file-three__item-btn::before {
   content: "-";
