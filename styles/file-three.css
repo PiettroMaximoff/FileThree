@@ -1,0 +1,88 @@
+.file-three__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.file-three__container > .file-three__list > .file-three__item-file {
+  margin-left: 18px;
+}
+.file-three__container > .file-three__list {
+  overflow: hidden;
+}
+.file-three__list {
+  position: relative;
+}
+.file-three__list::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 10px);
+  border-left: 1px dotted #000000;
+  left: 6px;
+  top: -25px;
+  z-index: -1;
+}
+.file-three__list .file-three__list {
+  padding-left: 18px;
+}
+.file-three__item {
+  position: relative;
+}
+.file-three__item::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  border: 1px dotted #000000;
+  left: -11px;
+  top: 15px;
+  z-index: -1;
+}
+.file-three__item:not(.file-three__item-file)::before {
+  left: 10px;
+}
+.file-three__item-header {
+  display: flex;
+  align-items: center;
+}
+.file-three__item-icon {
+  width: 20px;
+  height: 30px;
+  background: url("../images/folder.png") center no-repeat;
+  background-size: contain;
+}
+.file-three__item-name {
+  margin-left: 3px;
+}
+.file-three__item-btn {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000000;
+  margin-right: 5px;
+  background: #ffffff;
+}
+.file-three__item-btn::before {
+  content: "+";
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.file-three__item-file > .file-three__item-header > .file-three__item-icon {
+  background: url("../images/file.png") center no-repeat;
+  background-size: contain;
+}
+.file-three__item > .file-three__list {
+  display: none;
+}
+.file-three__item_open > .file-three__item-header > .file-three__item-icon {
+  background: url("../images/folder-open.png") center no-repeat;
+  background-size: contain;
+}
+.file-three__item_open > .file-three__list {
+  display: block;
+}
+.file-three__item_open > .file-three__item-header > .file-three__item-btn::before {
+  content: "-";
+}/*# sourceMappingURL=file-three.css.map */
